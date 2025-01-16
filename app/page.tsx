@@ -1,28 +1,18 @@
 "use client"
 
-
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react"
 import ParralaxImage from "./ParallaxImage"
 import { ReactLenis } from 'lenis/react'
 
 
 export default function Home() {
-  const boxRef = useRef();
-  useGSAP(() => {
-    gsap.to(boxRef.current, {
-      x: 500,
-      duration: 1,
-    });
-  });
+  
 
 
   return (
             
     <ReactLenis root>
    <main className="overflow-hidden">
-      <div className="nav" ref={boxRef}>
+      <div className="nav">
             <p>Home</p>
             <p>Productos</p>
             <p>Servicios</p>

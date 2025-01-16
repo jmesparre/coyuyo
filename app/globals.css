@@ -148,7 +148,6 @@ a {
 .nav {
   position: absolute;
   top: 10px;
-  left: -500px;
   padding: 1em;
   display: flex;
   z-index: 2;
