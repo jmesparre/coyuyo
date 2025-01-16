@@ -5,7 +5,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react"
 import ParralaxImage from "./ParallaxImage"
-import { ReactLenis } from "@studio-freight/react-lenis"
+import { ReactLenis, useLenis } from 'lenis/react'
 
 
 export default function Home() {
@@ -16,6 +16,11 @@ export default function Home() {
       duration: 1,
     });
   });
+
+  const lenis = useLenis(({ scroll }) => {
+   
+  })
+
   return (
             
     <ReactLenis root>

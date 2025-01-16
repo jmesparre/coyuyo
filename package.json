@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
-    "@studio-freight/react-lenis": "^0.0.47",
     "@swc/cli": "^0.6.0",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.19",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
