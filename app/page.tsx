@@ -1,11 +1,11 @@
 "use client"
 
-import Image from "next/image";
+
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react"
 import ParralaxImage from "./ParallaxImage"
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis } from 'lenis/react'
 
 
 export default function Home() {
@@ -17,9 +17,6 @@ export default function Home() {
     });
   });
 
-  const lenis = useLenis(({ scroll }) => {
-   
-  })
 
   return (
             
