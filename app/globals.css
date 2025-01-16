@@ -151,8 +151,7 @@ a {
   padding: 1em;
   display: flex;
   z-index: 2;
-  text-indent: 10;
-  font-size: 1vm;
+  gap: 9px;
 }
 
 .nav a {
