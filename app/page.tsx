@@ -5,6 +5,12 @@ import { ReactLenis, useLenis } from 'lenis/react'
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../components/ui/accordion"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,9 +81,9 @@ export default function Home() {
       { x: "100%", opacity: 0 }, 
       {
         x: "0%",
+        ease: "power3.out",
         opacity: 1,
         duration: 2,
-        ease: "power3.out",
         scrollTrigger: {
           trigger: ".intro",
           start: "top 80%",
@@ -90,12 +96,14 @@ export default function Home() {
 
   return (
             
-    <ReactLenis root>
-   <main className="overflow-hidden">
-   <div className="nav">
-          <a onClick={() => handleScroll('home')} className="view">Home</a>
+  <ReactLenis root>
+    <main className="overflow-hidden">
+         <div className="nav">
+
           <a onClick={() => handleScroll('productos')} className="view">Productos</a>
-          <a onClick={() => handleScroll('servicios')} className="view">Servicios</a>
+          <a onClick={() => handleScroll('servicios')} className="view">Terapia con Cannabis</a>
+          <a onClick={() => handleScroll('contacto')} className="view">Quienes somos</a>
+          <a onClick={() => handleScroll('preguntas')} className="view">Preguntas frecuentes</a>
           <a onClick={() => handleScroll('contacto')} className="view">Contacto</a>
         </div>
         <section className="hero" id="home">
@@ -139,7 +147,15 @@ export default function Home() {
               <p>instagram</p>
               <p>instagram</p>
             </div>
-            <div className="col"></div>
+            <Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
           
         </section>
 
