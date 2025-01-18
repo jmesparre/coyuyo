@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { ReactLenis, useLenis } from 'lenis/react'
+import { useLenis } from 'lenis/react'
 
 
 const lerp = (start, end, factor) => start + (end - start) * factor;

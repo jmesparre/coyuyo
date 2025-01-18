@@ -1,37 +1,54 @@
 "use client"
 
-import Image from "next/image";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react"
 import ParralaxImage from "./ParallaxImage"
 import { ReactLenis, useLenis } from 'lenis/react'
-
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
 
 export default function Home() {
-  const boxRef = useRef();
-  useGSAP(() => {
-    gsap.to(boxRef.current, {
-      x: 500,
-      duration: 1,
-    });
-  });
+  const lenis = useLenis();
 
-  const lenis = useLenis(({ scroll }) => {
-   
-  })
+  const handleScroll = (targetId: string) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement && lenis) {
+      lenis.scrollTo(targetElement, {
+        duration: 2.5, // Duración en segundos
+        easing: (t) => t * t, // Easing cuadrático
+      });
+    }
+  };
+
+  useEffect(() => {
+    gsap.from(".title",  { 
+      opacity: 0, 
+      y: -50, 
+      duration: 3,
+      ease: "power3.out",
+      delay: 0.3 
+      });
+  }, []);
+
+  useEffect(() => {
+    gsap.from(".nav",  { 
+      opacity: 0, 
+      y: -50, 
+      duration: 2,
+      ease: "power3.out",
+      delay: 0.1 
+      });
+  }, []);
 
   return (
             
     <ReactLenis root>
    <main className="overflow-hidden">
-      <div className="nav" ref={boxRef}>
-            <p>Home</p>
-            <p>Productos</p>
-            <p>Servicios</p>
-            <a className="view" href="#">Contacto</a>
-      </div>
-      <section className="hero">
+   <div className="nav">
+          <a onClick={() => handleScroll('home')} className="view">Home</a>
+          <a onClick={() => handleScroll('productos')} className="view">Productos</a>
+          <a onClick={() => handleScroll('servicios')} className="view">Servicios</a>
+          <a onClick={() => handleScroll('contacto')} className="view">Contacto</a>
+        </div>
+      <section className="hero" id="home">
           <div className="ParralaxImage-bg">
             <ParralaxImage src="bg.svg" alt=""/>
           </div>   
@@ -41,8 +58,8 @@ export default function Home() {
           </div>
      </section>    
 
-        <section className="producto">
-          <div className="ParralaxImage-bg ">
+        <section className="producto" id="productos">
+          <div className="ParralaxImage-bg">
             <ParralaxImage src="botella2.png" alt=""/>
           </div>
           <div className="description">
@@ -52,30 +69,26 @@ export default function Home() {
         </section>  
 
 
-        <section className="informacion">
+        <section className="informacion pb-10" id="servicios">
   
           <div className="col img-informacion ParralaxImage pt-40">
             <ParralaxImage src="/cañamo.jpg" alt="" />
           </div>
-          <div className="intro">
-            <h4>introduccion</h4>
+          <div className="intro pb-20 mt-10">
+            <h4>Introduccion</h4>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus cum dolorum beatae non quae cumque. Quasi, neque maxime.</p>
           </div>
                 
         </section>   
 
-       
-
-
-
-        <section className="footer bg-green-800">
+        <section id="contacto" className="footer bg-green-800">
         
-        <div className="col text-black">
-          <p>instagram</p>
-          <p>instagram</p>
-          <p>instagram</p>
-        </div>
-        <div className="col"></div>
+            <div className="col text-amber-100 w-full flex justify-center gap-4 bottom-2 absolute">
+              <p>instagram</p>
+              <p>instagram</p>
+              <p>instagram</p>
+            </div>
+            <div className="col"></div>
           
         </section>
 
