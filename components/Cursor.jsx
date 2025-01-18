@@ -6,7 +6,7 @@ import gsap from 'gsap'
 const Cursor = () => {
     useEffect(()=>{
         const cursor = document.getElementById('custom-cursor')
-        const links = document.querySelectorAll('a')
+        const links = document.querySelectorAll('.view')
         const cursorText = document.querySelector('.cursor-text')
         
         const onMouseMove = (event)=>{

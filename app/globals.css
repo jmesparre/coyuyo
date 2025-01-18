@@ -28,6 +28,7 @@ body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #dedee3;
 }
 
 img.img-bg {
@@ -138,6 +139,7 @@ a {
   display: flex;
   z-index: 2;
   gap: 1.5em;
+  color: #dedee3;
 }
 
 .nav a {
@@ -152,7 +154,7 @@ a {
 
 .hero {
   height: 79vw;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #dedee3;
   user-select: none;
 
 }

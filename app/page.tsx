@@ -99,7 +99,6 @@ export default function Home() {
   <ReactLenis root>
     <main className="overflow-hidden">
          <div className="nav">
-
           <a onClick={() => handleScroll('productos')} className="view">Productos</a>
           <a onClick={() => handleScroll('servicios')} className="view">Terapia con Cannabis</a>
           <a onClick={() => handleScroll('contacto')} className="view">Quienes somos</a>
@@ -147,14 +146,15 @@ export default function Home() {
               <p>instagram</p>
               <p>instagram</p>
             </div>
+            
             <Accordion type="single" collapsible>
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Is it accessible?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="view cursor-none pl-20 pr-20">Is it accessible?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
 
           
         </section>
