@@ -17,10 +17,10 @@ const Cursor = () => {
         const onMouseEnterLink =(event)=>{
             const link = event.target;
             if(link.classList.contains('view')){
-                gsap.set(cursor,{scale:4})
+                gsap.set(cursor,{scale:3})
                 cursorText.style.display = 'block'
             }else {
-                gsap.set(cursor,{scale:4})
+                gsap.set(cursor,{scale:3})
             }
         }  
 
@@ -36,7 +36,7 @@ const Cursor = () => {
         })
     })
   return (
-    <div id='custom-cursor' className='custom-cursor'>
+    <div id='custom-cursor' className='custom-cursor transform'>
         <span className='cursor-text'>+</span>
     </div>
   )

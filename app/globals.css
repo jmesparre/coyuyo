@@ -134,18 +134,19 @@ a {
 }
 
 .logo-t {
-  height: 12%;
-  width: 12%;
+  height: 100%;
+  width: 9rem;
   margin: auto;
 }
 
 .nav {
   position: absolute;
-  top: 0px;
+  top: 1em;
+  right: 2em;
   padding: 1em;
   display: flex;
   z-index: 2;
-  gap: 9px;
+  gap: 2em;
 }
 
 .nav a {
@@ -232,6 +233,10 @@ section.informacion {
   width: 100%;
 }
 
+.intro p {
+  width:80%;
+}
+
 
 @media (max-width: 768px) {
   .logo-t {
@@ -276,4 +281,10 @@ section.informacion {
     padding-top: 100px;
   }
 
+  .intro p {
+    width:100%;
+  }
 }
+
+
+
