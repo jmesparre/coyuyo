@@ -57,7 +57,6 @@ export default function Home() {
           </div>
         </section>
 
-    
 
         <section className="producto" id="productos">
           <div className="ParralaxImage-bg">
