@@ -37,7 +37,6 @@ export default function Home() {
       delay: 0.1 
       });
   }, []);
-
   return (
             
     <ReactLenis root>
@@ -48,7 +47,7 @@ export default function Home() {
           <a onClick={() => handleScroll('servicios')} className="view">Servicios</a>
           <a onClick={() => handleScroll('contacto')} className="view">Contacto</a>
         </div>
-      <section className="hero" id="home">
+        <section className="hero" id="home">
           <div className="ParralaxImage-bg">
             <ParralaxImage src="bg.svg" alt=""/>
           </div>   
@@ -56,7 +55,9 @@ export default function Home() {
              <img src="log1.svg" alt="" className="logo-t w-full justify-center" />
              <h1>Coyuyo</h1>
           </div>
-     </section>    
+        </section>
+
+    
 
         <section className="producto" id="productos">
           <div className="ParralaxImage-bg">
