@@ -4,6 +4,9 @@ import ParralaxImage from "./ParallaxImage"
 import { ReactLenis, useLenis } from 'lenis/react'
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const lenis = useLenis();
@@ -37,6 +40,54 @@ export default function Home() {
       delay: 0.1 
       });
   }, []);
+
+   useEffect(() => {
+    gsap.from(".hero",  { 
+      opacity: 0, 
+      y: -150, 
+      duration: 3,
+      ease: "power3.out",
+      });
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".description",
+      { x: "-100%", opacity: 0 }, 
+      {
+        x: "0%",
+        opacity: 1,
+        duration: 2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".description",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none", 
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".intro",
+      { x: "100%", opacity: 0 }, 
+      {
+        x: "0%",
+        opacity: 1,
+        duration: 2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".intro",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none", 
+        },
+      }
+    );
+  }, []);
+
   return (
             
     <ReactLenis root>
@@ -48,7 +99,7 @@ export default function Home() {
           <a onClick={() => handleScroll('contacto')} className="view">Contacto</a>
         </div>
         <section className="hero" id="home">
-          <div className="ParralaxImage-bg">
+          <div className="ParralaxImage-bg product-1">
             <ParralaxImage src="bg.svg" alt=""/>
           </div>   
           <div className="title col items-center w-full">
