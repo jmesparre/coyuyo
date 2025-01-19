@@ -153,24 +153,41 @@ a {
 }
 
 .hero {
-  height: 79vw;
+  height: 100vw;
   background-color: #dedee3;
   user-select: none;
-
+  margin-bottom: -300px;
 }
 
 
-
 .producto {
-  height: 100%;
-  padding-right: 1em;
+    height: 73vw;
+    padding-right: 1em;
     display: block;
     align-items: left;
-    padding-left: 2em;
     z-index: 2;
-    padding-top: 60px;
+    padding-top: 240px;
+  }
+
+  .producto-crema {
+    height: 80vw;
+    padding-right: 1em;
+    display: block;
+    align-items: right;
+    z-index: 2;
+    padding-top: 240px;
   }
   
+  .producto-crema p {
+    text-align: left;   
+  }
+
+  .product-title {
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 80px;
+
+  }
   
   .producto p {
     width: 10 0%;
@@ -179,26 +196,39 @@ a {
     color: black;
   }
   
-  .producto p:nth-child(1){
-    text-decoration: underline;
-    margin-bottom: 0.5em;
+  .producto-crema {
+    padding-top: 40px;
+    
   }
 
   .producto .ParralaxImage-bg {
     background-color: rgba(0, 0, 0, 0);
+    width: 90%;
+    margin-left: 130px;
   }
   
 .description {
   position: absolute;
   width: 28%; 
-  top: 35%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  top: 140px;
+  left: 15%;
+  z-index: 2; 
+  padding-top: 8em;
+}
+
+.crema-description {
+  position: absolute;
+  width: 28%; 
+  top:50px;
+  right: 15%;
+  z-index: 2; 
+}
+
+.crema-description p {
+  margin-top: 1em;
 }
 
 .description p {
-  color: black;
   text-align: left;
   margin-top: 1em;
 }
@@ -230,10 +260,6 @@ section.informacion {
   width:80%;
 }
 
-.algo {
-  font-size: calc((var(--heading-1-size-value) - 1)* 1.2vw + 1rem);
-}
-
 
 @media (max-width: 768px) {
   .logo-t {
@@ -253,15 +279,23 @@ section.informacion {
   .title {
     top: 4em;
   }
-  .description {
-    top: 20%;
-    left: 23%;
-    top:50%;
-    width: 40%;
-  }
+
+ 
 
   .producto {
-    padding-top: 5em;
+    height: 130vw;
+    padding-right: 1em;
+      display: block;
+      align-items: right;
+      padding-left: 2em;
+      z-index: 2;
+    }
+
+
+  .description {
+    left: 10%;
+    width: 33%;
+    padding-top: 3em;
   }
 
 section.informacion {
@@ -275,11 +309,19 @@ section.informacion {
 
   .intro
   {
-    padding-top: 100px;
+    padding-top: 130px;
   }
 
   .intro p {
     width:100%;
+  }
+
+  .producto .ParralaxImage-bg {
+    width: 160%;
+    height: 130vw;
+    margin-left: -190px;
+    padding-bottom: 100px;
+    
   }
 }
 

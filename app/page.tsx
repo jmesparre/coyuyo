@@ -59,12 +59,13 @@ export default function Home() {
   useEffect(() => {
     gsap.fromTo(
       ".description",
-      { x: "-100%", opacity: 0 }, 
+      { x: "-200%", opacity: 0 }, 
       {
         x: "0%",
         opacity: 1,
         duration: 2,
         ease: "power3.out",
+       
         scrollTrigger: {
           trigger: ".description",
           start: "top 80%",
@@ -77,16 +78,56 @@ export default function Home() {
 
   useEffect(() => {
     gsap.fromTo(
-      ".intro",
-      { x: "100%", opacity: 0 }, 
+      ".crema-description",
+      { x: "200%", opacity: 0 }, 
       {
         x: "0%",
+        opacity: 1,
+        duration: 2,
+        ease: "power3.out",
+       
+        scrollTrigger: {
+          trigger: ".crema-description",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none", 
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".intro",
+      { opacity: 0.1 }, 
+      {
+       
         ease: "power3.out",
         opacity: 1,
         duration: 2,
         scrollTrigger: {
           trigger: ".intro",
           start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none", 
+        },
+      }
+    );
+  }, []);
+
+  
+  useEffect(() => {
+    gsap.fromTo(
+      ".product-title",
+      { opacity: 0.1 }, 
+      {
+        
+        ease: "power3.out",
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: ".product-title",
+          start: "top 50%",
           end: "bottom 20%",
           toggleActions: "play none none none", 
         },
@@ -106,7 +147,7 @@ export default function Home() {
           <a onClick={() => handleScroll('contacto')} className="view">Contacto</a>
         </div>
         <section className="hero" id="home">
-          <div className="ParralaxImage-bg product-1">
+          <div className="ParralaxImage-bg">
             <ParralaxImage src="bg.svg" alt=""/>
           </div>   
           <div className="title col items-center w-full">
@@ -115,15 +156,36 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="product-title">   
+          <div className="block text-center">
+              <h1 className="text-stone-800">
+                .Productos
+              </h1>
+            </div>
+        </section>
 
         <section className="producto" id="productos">
-          <div className="ParralaxImage-bg">
-            <ParralaxImage src="botella2.png" alt=""/>
+        
+          <div className="ParralaxImage-bg ">
+            <ParralaxImage src="botella2c.png" alt=""/>
           </div>
           <div className="description">
             <h3>Aceite del copado</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur <s>explicabo </s>deleniti a inventore vel ratione neque est nostrum dolore mollitia! Blanditiis <u> consectetur</u> dolorem fugit quis quo non reprehenderit. Quaerat, non.</p>
           </div>
+          
+        </section>  
+
+        <section className="producto-crema pt-10" id="productos2">
+        
+          <div className="ParralaxImage-bg ">
+            <ParralaxImage src="crema.png" alt=""/>
+          </div>
+          <div className="crema-description">
+            <h3>Cremannabis</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur <s>explicabo </s>deleniti a inventore vel ratione neque est nostrum dolore mollitia! Blanditiis <u> consectetur</u> dolorem fugit quis quo non reprehenderit. Quaerat, non.</p>
+          </div>
+          
         </section>  
 
 
@@ -133,38 +195,43 @@ export default function Home() {
             <ParralaxImage src="/cañamo.jpg" alt="" />
           </div>
           <div className="intro pb-20 mt-10">
-            <h4>Introduccion</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus cum dolorum beatae non quae cumque. Quasi, neque maxime.</p>
+            <h4>Terapias con cannabis</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde 
+              necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus 
+              cum dolorum beatae non quae cumque. Quasi, neque maxime.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde 
+              necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus 
+              cum dolorum beatae non quae cumque. Quasi, neque maxime.</p>
           </div>
                 
         </section>   
 
-        <section id="faq" className="bg-green-800">
+        <section id="faq">
 
-          <div className=" w-6/12 m-auto pt-32">
-            <h3 className="pb-14 text-center">Preguntas Frecuentes</h3>
+          <div className=" lg:w-6/12 sm:w-6/12  m-auto pt-10">
 
-            <Accordion type="single" collapsible className="text-white text-9xl">
+            <h3 className="pb-20 text-center">Preguntas Frecuentes</h3>
+
+            <Accordion type="single" collapsible className=" text-9xl">
               <AccordionItem value="item-1" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none text-white text-base">- Is it accessible?</AccordionTrigger>
+                <AccordionTrigger className="view cursor-none text-base">- Is it accessible?</AccordionTrigger>
                 <AccordionContent>
                   Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none text-white text-base">- blah clals blah blah</AccordionTrigger>
+                <AccordionTrigger className="view cursor-none  text-base">- blah clals blah blah</AccordionTrigger>
                 <AccordionContent>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore aut possimus sapiente atque voluptatibus, iste eum modi unde id officia quo animi nostrum molestias perspiciatis suscipit delectus, repellendus rem reprehenderit.
                 </AccordionContent>
               </AccordionItem>
             <AccordionItem value="item-3" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none text-white text-base">- Quienes puede consumirlo</AccordionTrigger>
+                <AccordionTrigger className="view cursor-none  text-base">- Quienes puede consumirlo</AccordionTrigger>
                 <AccordionContent>
                   Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none text-white text-base">- Quienes puede consumirlo</AccordionTrigger>
+                <AccordionTrigger className="view cursor-none text-base">- Quienes puede consumirlo</AccordionTrigger>
                 <AccordionContent>
                   Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
