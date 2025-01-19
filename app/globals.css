@@ -56,7 +56,7 @@ h1 {
 }
 
 h3 {
-  color: black;
+  color: #9caca0;
   font-family: "PP Editorial Old";
   font-size: 4em;
   font-weight: 400;
@@ -164,7 +164,6 @@ a {
     height: 73vw;
     padding-right: 1em;
     display: block;
-    align-items: left;
     z-index: 2;
     padding-top: 240px;
   }
@@ -186,12 +185,15 @@ a {
     height: fit-content;
     background-color: rgba(0, 0, 0, 0);
     margin-bottom: 80px;
+  }
 
+  .product-title h1 {
+    color: #1f1f1f;
   }
   
   .producto p {
     width: 10 0%;
-    text-align: left;
+    text-align: right;
     display: block;
     color: black;
   }
@@ -228,8 +230,12 @@ a {
   margin-top: 1em;
 }
 
+.description h3{
+  text-align: right;
+}
+
 .description p {
-  text-align: left;
+  text-align: right;
   margin-top: 1em;
 }
 
@@ -258,6 +264,10 @@ section.informacion {
 
 .intro p {
   width:80%;
+}
+
+.faq h3 {
+  color: black;
 }
 
 

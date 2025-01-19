@@ -104,7 +104,7 @@ export default function Home() {
        
         ease: "power3.out",
         opacity: 1,
-        duration: 2,
+        duration: 3,
         scrollTrigger: {
           trigger: ".intro",
           start: "top 80%",
@@ -158,8 +158,8 @@ export default function Home() {
 
         <section className="product-title">   
           <div className="block text-center">
-              <h1 className="text-stone-800">
-                .Productos
+              <h1>
+                Productos
               </h1>
             </div>
         </section>
@@ -184,6 +184,12 @@ export default function Home() {
           <div className="crema-description">
             <h3>Cremannabis</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur <s>explicabo </s>deleniti a inventore vel ratione neque est nostrum dolore mollitia! Blanditiis <u> consectetur</u> dolorem fugit quis quo non reprehenderit. Quaerat, non.</p>
+            <ul className="pt-5">
+              <li>•   Medicina Natural</li>
+              <li>•   Terapeutica</li>
+              <li>•   Anti Age</li>
+              <li>•   Te saca la paspadita</li>
+            </ul>
           </div>
           
         </section>  
@@ -205,13 +211,13 @@ export default function Home() {
                 
         </section>   
 
-        <section id="faq">
+        <section className="faq" id="faq">
 
           <div className=" lg:w-6/12 sm:w-6/12  m-auto pt-10">
 
-            <h3 className="pb-20 text-center">Preguntas Frecuentes</h3>
+            <h4 className="pb-14 text-center">Preguntas Frecuentes</h4>
 
-            <Accordion type="single" collapsible className=" text-9xl">
+            <Accordion type="single" collapsible className="text-black text-9xl">
               <AccordionItem value="item-1" className="pl-5 pr-5">
                 <AccordionTrigger className="view cursor-none text-base">- Is it accessible?</AccordionTrigger>
                 <AccordionContent>
