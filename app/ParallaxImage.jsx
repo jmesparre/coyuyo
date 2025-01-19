@@ -38,7 +38,7 @@ const ParallaxImage = ({ src, alt }) => {
         if (
           Math.abs(currentTranslateY.current - targetTranslateY.current) > 0.1
         ) {
-          imageRef.current.style.transform = `translateY(${currentTranslateY.current}px)`;
+          imageRef.current.style.transform = `translateY(${currentTranslateY.current}px) scale(1.25)`;
         }
       }
       rafId.current = requestAnimationFrame(animate);
