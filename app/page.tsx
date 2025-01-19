@@ -100,9 +100,9 @@ export default function Home() {
     <main className="overflow-hidden">
          <div className="nav">
           <a onClick={() => handleScroll('productos')} className="view">Productos</a>
-          <a onClick={() => handleScroll('servicios')} className="view">Terapia con Cannabis</a>
+          <a onClick={() => handleScroll('servicios')} className="view">Terapias</a>
           <a onClick={() => handleScroll('contacto')} className="view">Quienes somos</a>
-          <a onClick={() => handleScroll('preguntas')} className="view">Preguntas frecuentes</a>
+          <a onClick={() => handleScroll('faq')} className="view">Preguntas frecuentes</a>
           <a onClick={() => handleScroll('contacto')} className="view">Contacto</a>
         </div>
         <section className="hero" id="home">
@@ -139,6 +139,41 @@ export default function Home() {
                 
         </section>   
 
+        <section id="faq" className="bg-green-800">
+
+          <div className=" w-6/12 m-auto pt-32">
+            <h3 className="pb-14 text-center">Preguntas Frecuentes</h3>
+
+            <Accordion type="single" collapsible className="text-white text-9xl">
+              <AccordionItem value="item-1" className="pl-5 pr-5">
+                <AccordionTrigger className="view cursor-none text-white text-base">- Is it accessible?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2" className="pl-5 pr-5">
+                <AccordionTrigger className="view cursor-none text-white text-base">- blah clals blah blah</AccordionTrigger>
+                <AccordionContent>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore aut possimus sapiente atque voluptatibus, iste eum modi unde id officia quo animi nostrum molestias perspiciatis suscipit delectus, repellendus rem reprehenderit.
+                </AccordionContent>
+              </AccordionItem>
+            <AccordionItem value="item-3" className="pl-5 pr-5">
+                <AccordionTrigger className="view cursor-none text-white text-base">- Quienes puede consumirlo</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4" className="pl-5 pr-5">
+                <AccordionTrigger className="view cursor-none text-white text-base">- Quienes puede consumirlo</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        
+      </section>
+
         <section id="contacto" className="footer bg-green-800">
         
             <div className="col text-amber-100 w-full flex justify-center gap-4 bottom-2 absolute">
@@ -146,16 +181,6 @@ export default function Home() {
               <p>instagram</p>
               <p>instagram</p>
             </div>
-            
-            <Accordion type="single" collapsible>
-              <AccordionItem value="item-1">
-                <AccordionTrigger className="view cursor-none pl-20 pr-20">Is it accessible?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
           
         </section>
 
