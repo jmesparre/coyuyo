@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Corben';
+  src: url('/Corben-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --heading-1-size-value: 4;
   --logo-size-value: 9;
@@ -49,18 +56,19 @@ img.img-bg {
 
 h1 {
   color: white;
-  font-family: "Times New Roman";
+  font-family: "Corben", serif;
+  font-style: normal;
   font-size: calc((var(--heading-1-size-value) - 1)* 1.2vw + 1rem);
   font-weight: 400;
 }
 
 h3 {
-  color: #9caca0;
-  font-family: "Times New Roman";
-  font-size: 4em;
+  font-family: "Corben", serif;
   font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
   text-indent: 1px;
-  font-style: italic;
+  padding-bottom: 11px;
   line-height: 1em;
 }
 
@@ -73,11 +81,10 @@ section {
 
 h4 {
   color: black;
-  font-family: "Times New Roman";
+  font-family: "Corben", serif;
   font-size: 3.5em;
   font-weight: 400;
   text-indent: 1px;
-  font-style: italic;
   line-height: 1em;
   margin-bottom: 0.25em;
 }
@@ -99,24 +106,15 @@ a {
 }
 
 .logo-t {
-  height: 100%;
-  width: calc((var(--logo-size-value) - 1)* 1.2vw + 1rem);
+  padding-bottom: 1vw;
   margin: auto;
 }
 
-.nav {
-  position: absolute;
-  top: 1em;
-  right: 2em;
-  padding: 1em;
-  display: flex;
-  z-index: 2;
-  gap: 1.5em;
-  color: #dedee3;
-}
-
-.nav a {
-  font-size: 1em;
+.nav-bar {
+  background-color: #dedee3;
+  font-family: "Corben", serif;
+  cursor: pointer;
+  
 }
 
 
@@ -126,23 +124,20 @@ a {
 }
 
 .hero {
-  height: 100vw;
+  height: 90vw;
   background-color: #dedee3;
   user-select: none;
-  margin-bottom: -300px;
+  margin-top: -90px;  
 }
 
-
-.producto {
-    height: 73vw;
-    padding-right: 1em;
-    display: block;
-    z-index: 2;
-    padding-top: 240px;
-  }
+.hero-title {
+  top: 3.5em;
+    width: 100%;
+    text-align: center;
+}
 
   .producto-crema {
-    height: 80vw;
+    height: 70vw;
     padding-right: 1em;
     display: block;
     align-items: right;
@@ -157,8 +152,8 @@ a {
   .product-title {
     height: fit-content;
     background-color: rgba(0, 0, 0, 0);
-    margin-bottom: 80px;
-    margin-top: 180px;
+    margin-bottom: 180px;
+    
   }
 
   .product-title h1 {
@@ -166,7 +161,7 @@ a {
   }
   
   .producto p {
-    width: 10 0%;
+    width: 100%;
     text-align: right;
     display: block;
     color: black;
@@ -177,25 +172,42 @@ a {
     
   }
 
+  .producto {
+    height: 70vw;
+  }
+
   .producto .ParralaxImage-bg {
     background-color: rgba(0, 0, 0, 0);
-    width: 90%;
+    position: absolute;
     margin-left: 130px;
+    width: 55vw;
+    right: 0%;
+  top: 193px;
+  height: auto;
+  }
+
+  .producto-crema .ParralaxImage-bg {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    margin-left: 130px;
+    width: 40vw;
+    left: 0%;
+    height: auto;
   }
   
 .description {
   position: absolute;
   width: 28%; 
-  top: 93px;
+  top: 13px;
   left: 15%;
   z-index: 2; 
-  padding-top: 8em;
+  
 }
 
 .crema-description {
   position: absolute;
   width: 28%; 
-  top:150px;
+  top:90px;
   right: 15%;
   z-index: 2; 
 }
@@ -218,40 +230,57 @@ section.informacion {
   width: 100%;
   position: relative;
    display: flex;
+   height: 70vw;
  }
 
 
 .img-informacion{
-  max-width: 38%;
-  padding-right: 1em;
+    opacity: 50%;
+    max-width: 38%;
+ 
   user-select: none;
 }
 
 .intro {
   color: black;
-  text-align: left;
+  text-align: right;
   margin-top: 1em;
-  padding-left: 7em;
-  padding-right: 10em;
-  width: 100%;
+  width: 50%;
+  padding-right: 4em;
+  margin-left: 15%;
 }
 
 .intro p {
-  width:80%;
+  width:100%;
 }
 
+.faq {
+  height: 70vw;
+}
 .faq h3 {
   color: black;
 }
 
+.footer {
+  background-color: #00752F;
+}
+
 
 @media (max-width: 768px) {
-  .logo-t {
-    height: 15%;
-    width: 15%;
-    margin: auto;
-    margin-top: 2em;
+ 
+  .nav-web {
+    display:none;
   }
+
+  .hero {
+    margin-top: 20px;
+  }
+
+.hero-title{
+  top: 2em;
+  display: block;
+
+}
 
   h3 {
     font-size: 2.5em;
@@ -260,15 +289,6 @@ section.informacion {
   .title {
     top: 4em;
   }
-
-  .producto {
-  
-    padding-right: 1em;
-      display: contents;
-      align-items: right;
-      padding-left: 2em;
-      z-index: 2;
-    }
 
     .product-title h1 {
       margin-top: 160px;
@@ -279,9 +299,18 @@ section.informacion {
   .description {
     left: 15%;
     position: relative;
-    top:20px;
     width: 75%;
-    padding-bottom: 100px;
+    top:405px;
+  }
+
+  .crema-description {
+    position: relative;
+    width: 75%; 
+    display: block;
+    top:385px;
+    left: 15%;
+    z-index: 2; 
+    
   }
 
   .description h3 {
@@ -297,24 +326,40 @@ section.informacion {
   }
 
   .img-informacion{
-    max-width: 60%;
-    padding-right: 1em;
+    max-width: 40%;
+    position: absolute;
+    top:-300px;
+    opacity: 50%;
+    right: 0px;
   }
 
   .intro
   {
-    padding-top: 130px;
+    width: 75%;
+    text-align: left;
+    margin-bottom: 200px;
   }
 
   .intro p {
     width:100%;
   }
 
+  .producto {
+    padding-bottom: 50em;
+  }
+
   .producto .ParralaxImage-bg {
-    width: 160%;
-    margin-left: -270px;
-   
-    
+    top: 100px;
+    width: 90%;
+  }
+
+  .producto-crema{
+    height: 175vw; 
+  }
+ 
+  .producto-crema .ParralaxImage-bg {
+    width: 70%;
+    margin-left: 100px;
   }
 }
 
@@ -386,4 +431,34 @@ section.informacion {
 }
 
 
+/* Estilo para el botón "hamburger" en dispositivos móviles */
+.hamburger-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
+@media (min-width: 768px) {
+  .hamburger-icon {
+    display:
+     none; /* Oculta el botón en pantallas grandes */
+  }
+
+
+
+  nav ul {
+    display: flex; /* Muestra los enlaces horizontalmente */
+    align-items: center;
+  }
+
+  nav ul li a {
+    padding: 0.5rem 1rem;
+    color: black;
+    text-decoration: none;
+    
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: gray; /* Color al pasar el ratón */
+  }
+}

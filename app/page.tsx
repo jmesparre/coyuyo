@@ -1,7 +1,7 @@
 "use client"
 
 import ParralaxImage from "./ParallaxImage"
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis } from 'lenis/react'
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,17 +15,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const lenis = useLenis();
-
-  const handleScroll = (targetId: string) => {
-    const targetElement = document.getElementById(targetId);
-    if (targetElement && lenis) {
-      lenis.scrollTo(targetElement, {
-        duration: 2.5, // Duración en segundos
-        easing: (t) => t * t, // Easing cuadrático
-      });
-    }
-  };
+  
 
   useEffect(() => {
     gsap.from(".title",  { 
@@ -52,6 +42,16 @@ export default function Home() {
       opacity: 0, 
       y: -150, 
       duration: 3,
+      ease: "power3.out",
+      });
+  }, []);
+
+  useEffect(() => {
+    gsap.from(".hero-title",  { 
+      opacity: 0, 
+      y: -150, 
+      duration: 3,
+      delay: 1,
       ease: "power3.out",
       });
   }, []);
@@ -139,21 +139,16 @@ export default function Home() {
             
   <ReactLenis root>
     <main className="overflow-hidden">
-         <div className="nav">
-          <a onClick={() => handleScroll('productos')} className="view">Productos</a>
-          <a onClick={() => handleScroll('servicios')} className="view">Terapias</a>
-          <a onClick={() => handleScroll('contacto')} className="view">Quienes somos</a>
-          <a onClick={() => handleScroll('faq')} className="view">Preguntas frecuentes</a>
-          <a onClick={() => handleScroll('contacto')} className="view">Contacto</a>
-        </div>
+        
         <section className="hero" id="home">
+
+          <h1 className="hero-title absolute  margin-auto z-20 text-white ">Somos una Fundacion de <br></br>Canabis Medicinal en San Luis</h1>
+
           <div className="ParralaxImage-bg">
-            <ParralaxImage src="bg.svg" alt=""/>
+            <ParralaxImage src="bg4.svg" alt=""/>
           </div>   
-          <div className="title col items-center w-full">
-             <img src="log1.svg" alt="" className="logo-t w-full justify-center" />
-             <img src="coyuyo-logo.svg" alt="" className="m-auto w-1/4 pt-2" />
-          </div>
+          
+         
         </section>
 
         <section className="product-title">   
@@ -168,21 +163,22 @@ export default function Home() {
         
         
           <div className="ParralaxImage-bg ">
-            <ParralaxImage src="botella2c.png" alt=""/>
+            <ParralaxImage src="botella2d.png" alt=""/>
           </div>
-          <div className="description">
+          <div className="description pt-32 sm:pt-52">
             <h3>Aceite del copado</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur <s>explicabo </s>deleniti a inventore vel ratione neque est nostrum dolore mollitia! Blanditiis <u> consectetur</u> dolorem fugit quis quo non reprehenderit. Quaerat, non.</p>
           </div>
           
+          
         </section>  
 
-        <section className="producto-crema pt-10" id="productos2">
+        <section className="producto-crema" >
         
           <div className="ParralaxImage-bg ">
-            <ParralaxImage src="crema.png" alt=""/>
+            <ParralaxImage src="crema.jpg" alt=""/>
           </div>
-          <div className="crema-description">
+          <div className="crema-description pt-20 sm:pt-20">
             <h3>Cremannabis</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur <s>explicabo </s>deleniti a inventore vel ratione neque est nostrum dolore mollitia! Blanditiis <u> consectetur</u> dolorem fugit quis quo non reprehenderit. Quaerat, non.</p>
             <ul className="pt-5">
@@ -196,49 +192,53 @@ export default function Home() {
         </section>  
 
 
-        <section className="informacion pb-40 pt-40" id="servicios">
+        <section className="informacion pt-20" id="terapias">
   
-          <div className="col img-informacion ParralaxImage pb-96">
-            <ParralaxImage src="/hojas.png" alt="" />
-          </div>
-          <div className="intro pb-20">
-            <h4>Terapias con cannabis</h4>
+          <div className="intro">
+            <h4 className="pb-6">Terapias con cannabis</h4>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde 
               necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus 
               cum dolorum beatae non quae cumque. Quasi, neque maxime.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde 
               necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus 
+              cum dolorum beatae non quae cumque. Quasi, neque maxime. Quasi, neque maxime.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde 
+              necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus 
+              cum dolorum beatae non quae cumque. Quasi, neque maxime. Quasi, neque maxime.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde 
+              necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus 
               cum dolorum beatae non quae cumque. Quasi, neque maxime.</p>
+          </div>
+          <div className="img-informacion ParralaxImage">
+            <ParralaxImage src="/hojas.png" alt="" />
           </div>
                 
         </section>   
 
-        <section className="faq" id="faq">
+        <section className="faq pt-16" id="faq">
 
-          <div className=" lg:w-6/12 sm:w-6/12  m-auto pt-10">
+          <div className=" w-10/12 sm:w-6/12  m-auto pt-5">
 
             <h4 className="pb-14 text-center">Preguntas Frecuentes</h4>
 
             <Accordion type="single" collapsible className="text-black text-9xl">
               <AccordionItem value="item-1" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none text-base">- Is it accessible?</AccordionTrigger>
+                <AccordionTrigger className="view cursor-none text-base cursor-pointer">- Is it accessible?</AccordionTrigger>
                 <AccordionContent>
                   Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none  text-base">- blah clals blah blah</AccordionTrigger>
+                <AccordionTrigger className="view cursor-none  text-base cursor-pointer">- blah clals blah blah</AccordionTrigger>
                 <AccordionContent>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore aut possimus sapiente atque voluptatibus, iste eum modi unde id officia quo animi nostrum molestias perspiciatis suscipit delectus, repellendus rem reprehenderit.
                 </AccordionContent>
               </AccordionItem>
             <AccordionItem value="item-3" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none  text-base">- Quienes puede consumirlo</AccordionTrigger>
+                <AccordionTrigger className="view cursor-none  text-base cursor-pointer">- Quienes puede consumirlo</AccordionTrigger>
                 <AccordionContent>
                   Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none text-base">- Quienes puede consumirlo</AccordionTrigger>
+                <AccordionTrigger className="view cursor-none text-base cursor-pointer">- Quienes puede consumirlo</AccordionTrigger>
                 <AccordionContent>
                   Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
@@ -248,12 +248,20 @@ export default function Home() {
         
       </section>
 
-        <section id="contacto" className="footer bg-green-800">
-        
-            <div className="col text-amber-100 w-full flex justify-center gap-4 bottom-2 absolute">
+        <section id="contacto" className="footer">
+            <div className="col w-3/4 sm:w-3/4 md:w-2/4 pl-24 ">
+             <h1 className="  pt-24 pl-4 " >Contacto.</h1>
+             <p className="w-3/4 pl-5 text-white">Lorem ipsum dolor sit amet consectetur adipisicing 
+             elit. Est porro laudantium eveniet maiores exercitationem, voluptatum qui dicta suscipit
+              laborum culpa, iusto minima asperiores modi delectus expedita consequuntur assumenda? 
+              Perferendis, temporibus! <br></br><br></br><b>.</b></p>
+              
+        </div>
+           
+            <div className="col text-amber-100 w-4/4 flex right-0 gap-4 bottom-2 pr-14 pb-4 absolute">
               <p>instagram</p>
-              <p>instagram</p>
-              <p>instagram</p>
+              <p>Whatsapp</p>
+              <p>telefono:123123-1212</p>
             </div>
           
         </section>

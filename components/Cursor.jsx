@@ -43,3 +43,28 @@ const Cursor = () => {
 }
 
 export default Cursor
+
+
+
+
+
+
+.producto {
+    height: 73vw;
+    padding-right: 1em;
+    display: block;
+    z-index: 2;
+    padding-top: 240px;
+  }
+
+  const lenis = useLenis();
+
+  const handleScroll = (targetId: string) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement && lenis) {
+      lenis.scrollTo(targetElement, {
+        duration: 2.5, // Duración en segundos
+        easing: (t) => t * t, // Easing cuadrático
+      });
+    }
+  };
