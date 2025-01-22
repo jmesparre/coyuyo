@@ -16,6 +16,9 @@ export default function RootLayout({
     <>
       <html lang="es">
         <head><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+      @import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
+      </style>
         </head>
         <body>
           <NavBar />
