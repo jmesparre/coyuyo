@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Corben';
-  src: url('/Corben-Regular.ttf') format('ttf');
+  src: url('../public/Corben-Regular.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
@@ -262,7 +262,7 @@ section.informacion {
 }
 
 .footer {
-  background-color: #00752F;
+  background-color: #00755a;
 }
 
 
