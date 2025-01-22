@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+  font-family: 'Corben';
+  src: url('../public/Corben.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --heading-1-size-value: 4;
