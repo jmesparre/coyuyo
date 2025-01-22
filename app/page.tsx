@@ -152,7 +152,7 @@ export default function Home() {
           </div>   
           <div className="title col items-center w-full">
              <img src="log1.svg" alt="" className="logo-t w-full justify-center" />
-             <h1>Coyuyo</h1>
+             <img src="coyuyo-logo.svg" alt="" className="m-auto w-1/4 pt-2" />
           </div>
         </section>
 
@@ -165,6 +165,7 @@ export default function Home() {
         </section>
 
         <section className="producto" id="productos">
+        
         
           <div className="ParralaxImage-bg ">
             <ParralaxImage src="botella2c.png" alt=""/>
@@ -195,12 +196,12 @@ export default function Home() {
         </section>  
 
 
-        <section className="informacion pb-10" id="servicios">
+        <section className="informacion pb-40 pt-40" id="servicios">
   
-          <div className="col img-informacion ParralaxImage pt-40">
-            <ParralaxImage src="/cañamo.jpg" alt="" />
+          <div className="col img-informacion ParralaxImage pb-96">
+            <ParralaxImage src="/hojas.png" alt="" />
           </div>
-          <div className="intro pb-20 mt-10">
+          <div className="intro pb-20">
             <h4>Terapias con cannabis</h4>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sequi animi unde 
               necessitatibus numquam laboriosam praesentium possimus, excepturi molestias iste doloribus 
