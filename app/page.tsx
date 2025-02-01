@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "../components/ui/accordion"
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -173,12 +174,12 @@ export default function Home() {
           
         </section>  
 
-        <section className="producto-crema" >
+        <section className="producto-crema " >
         
           <div className="ParralaxImage-bg ">
             <ParralaxImage src="crema.jpg" alt=""/>
           </div>
-          <div className="crema-description pt-20 sm:pt-20">
+          <div className="crema-description sm:pt-10">
             <h3>Cremannabis</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur <s>explicabo </s>deleniti a inventore vel ratione neque est nostrum dolore mollitia! Blanditiis <u> consectetur</u> dolorem fugit quis quo non reprehenderit. Quaerat, non.</p>
             <ul className="pt-5">
@@ -249,8 +250,8 @@ export default function Home() {
       </section>
 
         <section id="contacto" className="footer">
-            <div className="col w-3/4 sm:w-3/4 md:w-2/4 pl-24 ">
-             <h1 className="  pt-24 pl-4 " >Contacto.</h1>
+            <div className="w-4/4  sm:w-3/4 md:w-3/4 pl-4 sm:pl-24">
+             <h1 className="  pt-6 sm:pt-24 pl-4 " >Contacto.</h1>
              <p className="w-3/4 pl-5 text-white">Lorem ipsum dolor sit amet consectetur adipisicing 
              elit. Est porro laudantium eveniet maiores exercitationem, voluptatum qui dicta suscipit
               laborum culpa, iusto minima asperiores modi delectus expedita consequuntur assumenda? 

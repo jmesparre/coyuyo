@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 
 :root {
@@ -114,6 +113,13 @@ a {
   
 }
 
+.bg-nav-menu {
+  background-color: #dedee3;
+  border-top: 1px solid gray;
+    padding-top: 25px;
+    gap:22px;
+    padding-bottom: 55px;
+}
 
 .ParallaxImage-bg {
   height: 100vw;
@@ -227,7 +233,7 @@ section.informacion {
   width: 100%;
   position: relative;
    display: flex;
-   height: 70vw;
+   height: 80vw;
  }
 
 
@@ -238,12 +244,13 @@ section.informacion {
   user-select: none;
 }
 
+
 .intro {
   color: black;
   text-align: right;
   margin-top: 1em;
-  width: 50%;
-  padding-right: 4em;
+  width: 60%;
+  padding-right: 2em;
   margin-left: 15%;
 }
 
@@ -252,7 +259,9 @@ section.informacion {
 }
 
 .faq {
-  height: 70vw;
+  display: inline;
+  padding-bottom: 10vw;
+  padding-top: 8vw;
 }
 .faq h3 {
   color: black;
@@ -260,11 +269,16 @@ section.informacion {
 
 .footer {
   background-color: #00755a;
+  margin-top: 10vw;
+
 }
 
 
 @media (max-width: 768px) {
  
+  .faq h4 {
+    font-size: 2em;
+  }
   .nav-web {
     display:none;
   }
@@ -295,17 +309,16 @@ section.informacion {
 
   .description {
     left: 15%;
-    position: relative;
-    width: 75%;
-    top:405px;
+    width: 70%;
+    top:57vw;
   }
 
   .crema-description {
-    position: relative;
-    width: 75%; 
-    display: block;
-    top:385px;
+    width: 70%; 
+    top:64vw;
+    position: sticky;
     left: 15%;
+    height: max-content;
     z-index: 2; 
     
   }
@@ -330,12 +343,16 @@ section.informacion {
     right: 0px;
   }
 
-  .intro
-  {
-    width: 75%;
+  .intro {
+    width: 80%;
+    margin-top: 60vw;
     text-align: left;
-    margin-bottom: 200px;
+    margin-bottom: 40vw;
   }
+  .intro h4 {
+    font-size: 2em;
+  }
+
 
   .intro p {
     width:100%;
@@ -351,12 +368,16 @@ section.informacion {
   }
 
   .producto-crema{
-    height: 175vw; 
+    height: 180vw; 
   }
  
   .producto-crema .ParralaxImage-bg {
     width: 70%;
     margin-left: 100px;
+  }
+  .faq {
+    padding-bottom: 30vw;
+    padding-top: 40vw;
   }
 }
 
