@@ -21,8 +21,8 @@ const scrollToSection = (id) => {
       <div className="container mx-auto flex justify-between items-center pt-5 pb-5 pl-5">
       
         <div className="">
-             <img src="log-black.svg" alt="" className="top-3.5  w-[7%] md:w-[4%] sm:w-[4%] lg:w-[3.2%] xl:w-[2.5%] absolute" />
-             <img src="coyuyo-logo-black.svg" alt="" className=" w-[24%] md:w-[11%] sm:w-[19%] lg:w-[9%] top-5 ml-12 absolute" />
+             <img src="log-black.svg" alt="" className="top-5 sm:top-3.5  w-[7%] md:w-[4%] sm:w-[6%] lg:w-[3.2%] xl:w-[2.5%] absolute" />
+             <img src="coyuyo-logo-black.svg" alt="" className="top-6 sm:top-5  w-[24%] md:w-[11%] sm:w-[19%] lg:w-[9%]  ml-12 absolute" />
         </div>
         
         <div className="nav-web">
@@ -48,7 +48,7 @@ const scrollToSection = (id) => {
         {/* Botón "hamburger" (visible solo en pantallas pequeñas) */}
         <button
           onClick={toggleMenu}
-          className="block md:hidden focus:outline-none pr-2"
+          className="block md:hidden focus:outline-none pr-6 mt-[-5px] sm:mt-0"
         >
           <span className="hamburger-icon text-2xl">☰</span>
         </button>

@@ -197,25 +197,25 @@ export default function Home() {
 
             <Accordion type="single" collapsible className="text-black text-9xl">
               <AccordionItem value="item-1" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none text-base cursor-pointer">- ¿Es accesible el tratamiento?</AccordionTrigger>
+                <AccordionTrigger className="view text-base cursor-pointer">- ¿Es accesible el tratamiento?</AccordionTrigger>
                 <AccordionContent>
                   Sí, en Fundación Coyuyo trabajamos para que nuestros tratamientos sean accesibles para todos. Contáctanos para más información.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none  text-base cursor-pointer">- ¿Qué tipo de productos ofrecen?</AccordionTrigger>
+                <AccordionTrigger className="view  text-base cursor-pointer">- ¿Qué tipo de productos ofrecen?</AccordionTrigger>
                 <AccordionContent>
                   Ofrecemos una amplia gama de productos de cannabis medicinal, incluyendo aceites, cremas y otros productos terapéuticos.
                 </AccordionContent>
               </AccordionItem>
             <AccordionItem value="item-3" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none  text-base cursor-pointer">- ¿Quiénes puede consumir cannabis medicinal?</AccordionTrigger>
+                <AccordionTrigger className="view  text-base cursor-pointer">- ¿Quiénes puede consumir cannabis medicinal?</AccordionTrigger>
                 <AccordionContent>
                   El cannabis medicinal puede ser consumido por personas con una amplia variedad de condiciones, siempre bajo la supervisión de un profesional de la salud.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="pl-5 pr-5">
-                <AccordionTrigger className="view cursor-none text-base cursor-pointer">- ¿Es legal el cannabis medicinal en San Luis?</AccordionTrigger>
+                <AccordionTrigger className="view text-base cursor-pointer">- ¿Es legal el cannabis medicinal en San Luis?</AccordionTrigger>
                 <AccordionContent>
                   Sí, el cannabis medicinal es legal en San Luis para uso terapéutico. En Fundación Coyuyo te asesoramos sobre la normativa vigente.
                 </AccordionContent>

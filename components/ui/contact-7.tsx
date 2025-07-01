@@ -21,17 +21,17 @@ export const Contact7 = ({
   emailDescription = "Respondemos a todos los correos en 24 horas.",
   email = "fundacioncoyuyo@gmail.com",
   officeLabel = "Oficina",
-  officeDescription = "Visítanos para una consulta.",
+  officeDescription = "Visítanos para una consulta personalizada.",
   officeAddress = "San Luis, Argentina",
   phoneLabel = "Teléfono",
   phoneDescription = "Disponible de Lunes a Viernes, de 9am a 5pm.",
   phone = "+54 266 455-5555",
 }: Contact7Props) => {
   return (
-    <section className="bg-[#dedee3] pt-52 px-[10%]">
+    <section className="bg-[#dedee3] pt-52 pb-20 px-[10%]">
       <div className="">
         <div className="mb-14">
-          <h1 className="mt-2 mb-5 font-serif text-center text-5xl text-balance md:text-[3.5em] text-black">
+          <h1 className="mt-2 font-title pb-6 mb-5 font-serif text-center text-4xl text-balance md:text-[3.5em] text-black">
             {title}
           </h1>
           <p className="px-[10%] text-lg text-center">
