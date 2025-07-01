@@ -127,10 +127,8 @@ a {
 }
 
 .hero {
-  height: 90vw;
-  background-color: #dedee3;
+ 
   user-select: none;
-  margin-top: -90px;  
 }
 
 .hero-title {
@@ -240,8 +238,7 @@ section.informacion {
 .img-informacion{
     opacity: 50%;
     max-width: 38%;
- 
-  user-select: none;
+    user-select: none;
 }
 
 

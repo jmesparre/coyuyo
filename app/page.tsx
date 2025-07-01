@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../components/ui/accordion"
+import { Contact7 } from "@/components/ui/contact-7";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -117,18 +118,16 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="overflow-hidden">
-        
-        <section className="hero" id="home">
+    <main className="overflow-hidden">        
+        <section className="hero h-[90vw] pt-[0px] sm:pt-0" id="home">
 
-          <h1 className="hero-title absolute h-50 margin-auto pt-20 z-20 text-white ">
+          <h1 className="hero-title text-2xl pt-6 md:text-5xl lg:text-6xl md:pt-0 absolute px-2 margin-x-auto  z-20 text-white ">
             Somos una Fundacion de <br></br>Canabis Medicinal en San Luis
           </h1>
 
           <div className="ParralaxImage-bg">
             <ParralaxImage src="bg4.svg" alt=""/>
           </div>   
-          
          
         </section>
 
@@ -146,7 +145,7 @@ export default function Home() {
           <div className="ParralaxImage-bg ">
             <ParralaxImage src="botella2d.png" alt=""/>
           </div>
-          <div className="description pt-22 sm:pt-32">
+          <div className="description pt-52 sm:pt-32">
             <h3>Aceite de Cannabis Medicinal</h3>
             <p>Nuestro aceite de cannabis medicinal es de la más alta calidad, extraído de plantas cultivadas orgánicamente en San Luis. Ideal para aliviar dolores crónicos, ansiedad y otros padecimientos.</p>
             <ul className="pt-5 text-right">
@@ -157,7 +156,6 @@ export default function Home() {
             </ul>
           </div>
           
-          
         </section>  
 
         <section className="producto-crema " >
@@ -165,7 +163,7 @@ export default function Home() {
           <div className="ParralaxImage-bg ">
             <ParralaxImage src="crema.jpg" alt=""/>
           </div>
-          <div className="crema-description sm:pt-10">
+          <div className="crema-description pt-52 sm:pt-10">
             <h3>Crema de Cannabis Terapéutica</h3>
             <p>Nuestra crema de cannabis terapéutica es perfecta para aliviar dolores musculares y articulares. Con propiedades antiinflamatorias y analgésicas, es ideal para deportistas y personas con dolencias crónicas.</p>
             <ul className="pt-5">
@@ -226,22 +224,9 @@ export default function Home() {
           </div>
         
       </section>
-
-        <section id="contacto" className="footer">
-            <div className="w-4/4  sm:w-3/4 md:w-3/4 pl-4 sm:pl-24">
-             <h1 className="  pt-6 sm:pt-24 pl-4 " >Contacto.</h1>
-             <p className="w-3/4 pl-5 text-white">Si tienes alguna duda o consulta, no dudes en contactarnos. Estamos para ayudarte a mejorar tu calidad de vida a través del cannabis medicinal.</p>
-              
-        </div>
-           
-            <div className="col text-amber-100 w-4/4 flex right-0 gap-4 bottom-2 pr-14 pb-4 absolute">
-              <p>instagram</p>
-              <p>Whatsapp</p>
-              <p>telefono:123123-1212</p>
-            </div>
-          
+      <section id="contacto">
+        <Contact7 />
         </section>
-
       </main>
   );
 }

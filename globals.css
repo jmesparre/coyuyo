@@ -124,10 +124,9 @@ a {
 }
 
 .hero {
-  height: 90vw;
-  background-color: #dedee3;
+  height: 190vw;
   user-select: none;
-  margin-top: -90px;  
+  background-color: #00755a;
 }
 
 .hero-title {
